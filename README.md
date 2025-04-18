@@ -1,42 +1,51 @@
-# Multi-Platform Media Controller
+## Voice and Gesture Controlled Media Assistant
 
-This project implements a hands-free media controller using Python, integrating voice and gesture recognition for controlling media applications like YouTube and Spotify.
+A Python-based system that enables hands-free control over media playback and desktop applications using voice commands and hand gestures. This assistant integrates computer vision and speech recognition technologies to provide an intuitive and accessible user experience.
 
-## Features
-- Voice control for play, pause, volume adjustment, track navigation, and app launching.
-- Gesture recognition for additional media commands.
-- Real-time execution with low latency.
+### Features
 
-## Requirements
-Ensure you have the following installed:
-- Python 3.x
-- OpenCV
-- MediaPipe
-- PyAutoGUI
-- SpeechRecognition
-- Pyttsx3
-- PyAudio
+- **Voice Command Interface**  
+  Activate the assistant with the wake phrase “**Hello Media**” to:
+  - Launch desktop or web applications (e.g., YouTube, Spotify, Calculator)
+  - Control media playback (play, pause, next, previous, volume control)
+  - Search the web or initiate dictation mode
 
-## Usage
-1. Run the voice assistant:
-   ```sh
-   python voice_new.py
-   ```
-   - This starts the voice recognition system.
-   - Say "hello media" to activate the assistant.
-   - Use voice commands for media control.
-2. Enable gesture recognition (if needed) by saying "gesture":
-   - This launches the gesture-based control module.
-   - Perform predefined gestures for media actions.
+- **Gesture-Based Media Control**  
+  Uses a webcam and MediaPipe to recognize the following hand gestures:
+  - **Swipe Right/Left** – Skip to next/previous track
+  - **Thumbs Up** – Play/Pause
+  - **Thumbs Down** – Exit gesture mode
+  - **Index Up/Down** – Increase or decrease volume
 
-## Exiting
-- Use the voice command "exit" to stop the assistant.
-- Press 'q' to exit the gesture control window.
+- **Dictation Mode**  
+  Speak and transcribe text in real time directly into Notepad.
 
-## Notes
-- Ensure your microphone and webcam are functioning properly.
-- Internet is required for voice recognition (Google Speech Recognition).
-- Gesture control requires adequate lighting for accurate hand tracking.
+### Requirements
 
-# Gesture-and-Voice-assistant
-Developed a Multi-Platform Media Controller using Python, integrating voice and gesture recognition for hands-free media control, primarily for YouTube and Spotify. Implemented real-time voice commands and hand gesture recognition to perform actions like play, pause, volume control, track navigation, and application launching.
+- Python 3.7 or higher  
+- Python packages:
+  - `mediapipe`
+  - `opencv-python`
+  - `pyautogui`
+  - `speechrecognition`
+  - `pyttsx3`
+  - `pyaudio`
+
+Install dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Usage
+
+To launch the assistant:
+
+```bash
+python voice.py
+```
+
+- Ensure your microphone and webcam are accessible.
+- Use the wake phrase “**Hello Media**” to begin voice interaction.
+- Say “Enable gesture” to switch to gesture-based media control.
+
